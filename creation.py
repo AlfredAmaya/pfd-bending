@@ -23,4 +23,6 @@ def hello(c):
 c = canvas.Canvas("hello2.pdf")
 hello(c)
 c.showPage()
+hello(c)
+c.showPage()
 c.save()

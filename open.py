@@ -9,3 +9,8 @@ document.getNumPages()
 
 for page in document.pages:
     print(page.extractText())
+    print(document.getPageNumber(page))
+    
+print( document.documentInfo)
+print(document.numPages)
+
