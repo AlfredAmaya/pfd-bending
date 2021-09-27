@@ -2,7 +2,7 @@ from pathlib import Path
 
 from PyPDF2 import PdfFileReader, PdfFileWriter 
 
-pdf_path = ( Path.home()/"Desktop"/"pdfmanipulator"/"network_setup_recorder.pdf")
+pdf_path = ( Path.home()/"Desktop"/"pdfmanipulator"/"pdfs"/"network_setup_recorder.pdf")
 input_pdf = PdfFileReader(str(pdf_path))
 
 pdf_writer = PdfFileWriter()
