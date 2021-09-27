@@ -1,6 +1,5 @@
 from pathlib import Path
 from PyPDF2 import PdfFileReader
-from reportlab.pdfbase.pdfdoc import Pages
 
 pdf_path = ( Path.home()/"Desktop"/"pdfmanipulator"/"hello2.pdf")
 

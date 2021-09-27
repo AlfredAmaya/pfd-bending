@@ -11,12 +11,13 @@ pdf_writer = PdfFileWriter()
 #    page = input_pdf.getPage(n)
 #    page.rotateClockwise(90*n)
 #    pdf_writer.addPage(page)
+
 for page in input_pdf.pages[0:4]:
     page.rotateClockwise(90*input_pdf.getPageNumber(page))
     pdf_writer.addPage(page)
 
 
-with Path("chapter1slice.pdf").open(mode="wb") as output_file:
+with Path("pdfs/chapter1slice.pdf").open(mode="wb") as output_file:
     pdf_writer.write(output_file)
 
 
