@@ -9,15 +9,21 @@ root = Tk()
 pdf_frame = Frame(root).pack(fill=BOTH,expand=1)
 # Adding Scrollbar to the PDF frame
 scrol_y = Scrollbar(pdf_frame,orient=VERTICAL)
+scrol_x = Scrollbar(pdf_frame,orient=HORIZONTAL)
 # Adding text widget for inserting images
-pdf = Text(pdf_frame,yscrollcommand=scrol_y.set,bg="grey")
 # Setting the scrollbar to the right side
+pdf = Text(pdf_frame,yscrollcommand=scrol_y.set,bg="grey")
+pdf = Text(pdf_frame,xscrollcommand=scrol_x.set,bg="grey")
 scrol_y.pack(side=RIGHT,fill=Y)
+scrol_x.pack(side=BOTTOM,fill=X)
 scrol_y.config(command=pdf.yview)
+scrol_x.config(command=pdf.xview)
+
+
 # Finally packing the text widget
 pdf.pack(fill=BOTH,expand=1)
 # Here the PDF is converted to list of images
-pages = convert_from_path('hello2+square.pdf')
+pages = convert_from_path('pdfs/hello2+square.pdf')
 # Empty list for storing images
 photos = []
 # Storing the converted images into list
