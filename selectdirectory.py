@@ -1,8 +1,7 @@
-from PyPDF2 import PdfFileMerger
 from pathlib import Path
-
-from tkinter import filedialog
 from tkinter import *
+from tkinter import filedialog
+from PyPDF2 import PdfFileMerger
 
 pdf_merger = PdfFileMerger()
 
