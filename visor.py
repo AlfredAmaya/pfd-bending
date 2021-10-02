@@ -21,7 +21,7 @@ scrol_x.config(command=pdf.xview)
 
 
 # Finally packing the text widget
-pdf.pack(fill=BOTH,expand=1)
+pdf.pack(fill=BOTH,expand=10)
 # Here the PDF is converted to list of images
 pages = convert_from_path('pdfs/hello2+square.pdf')
 # Empty list for storing images
