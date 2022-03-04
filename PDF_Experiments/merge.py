@@ -1,7 +1,7 @@
 from pathlib import Path
 from tkinter import *
 from tkinter import filedialog
-from PyPDF2 import PdfFileMerger , PdfFileReader
+from PyPDF2 import PdfFileMerger , PdfFileWriter
 
 root = Tk()
 root.withdraw()
@@ -30,7 +30,7 @@ print(type(Dir_selected))
 File_Name = input()
 
 with Path(Dir_selected+File_Name+".pdf").open(mode="wb") as output_file:
-    MergeAB.write(output_file)
+    PdfFileWriter().addPage(MergeAB.pages[0]).write(output_file)
 
 
 
